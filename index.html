@@ -6,11 +6,44 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./assets/styles/style.css">
-        <script src="./scripts/main.js"></script>
+        <script src="./scripts/main.js" defer></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" defer></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" defer></script>
         <title>Google</title>
     </head>
 
     <body>
-        
+        <header>
+            <nav>
+                <a href="#">Gmail</a>
+                <a href="#">Imagens</a>
+                <button id="fazer-login">Fazer Login</button>
+            </nav>
+
+            <div class="search">
+                <img src="./assets/images/google.png" alt="Logo do Google">
+                <input type="search">
+                <ion-icon name="search-outline" class="icons"></ion-icon>
+                <ion-icon name="mic-outline" class="icons"></ion-icon>
+                <ion-icon name="camera-outline" class="icons"></ion-icon>
+                <button class="pesquisa">Pesquisa Google</button>
+                <button class="pesquisa">Estou com sorte</button>
+            </div>
+
+            <footer>
+                <nav>
+                    <a href="">Brasil</a> 
+                    <br>
+                    <a href="#">Sobre</a>
+                    <a href="#">Publicidade</a>
+                    <a href="#">Negócios</a>
+                    <a href="#">Como funciona a Pesquisa</a>
+                    <a href="#">Privacidade</a>
+                    <a href="#">Termos</a>
+                    <a href="#">Configurações</a>
+                </nav>
+
+            </footer>
+        </header>
     </body>
 </html>
