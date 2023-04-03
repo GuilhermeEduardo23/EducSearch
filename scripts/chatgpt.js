@@ -1,10 +1,12 @@
 //Inclusão da Api do ChatGPT
 
-const API_KEY = `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`;
+const API_KEY = `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`;
 
 //Acessar o campo de texto
 const mainSearch = document.querySelector(`.search`),
-    question = document.querySelector(`.pesquisa`);
+    question = document.querySelector(`.pesquisa`),
+    pResposta = document.getElementById(`resposta`),
+    divResposta = document.getElementById(`divResposta`);
 
 if(mainSearch) {
     //Aguardar o usuário clicar no botão Enviar
@@ -12,10 +14,11 @@ if(mainSearch) {
         //Bloquear o recarregamento da página
         e.preventDefault();
 
-        //Receber o valor do input
-        const pergunta = document.getElementById(`question`).value;
+        mainSearch.style.height = `600px`;
+        divResposta.style.display = `flex`;
 
-        console.log(pergunta);
+        //Receber o valor do input
+        const pergunta = document.getElementById(`pergunta`).value;
 
         //Link para requisição do ChatGPT
         await fetch(`https://api.openai.com/v1/completions`, {
@@ -41,11 +44,10 @@ if(mainSearch) {
         //Acessa o then quando tiver resposta
         .then((resposta) => resposta.json())
         .then((dados) => {
-            console.log(dados);
-            console.log(dados.choice[0].text);
+            pResposta.innerText = dados.choices[0].text;
         })
         .catch((erro) => {
-            console.log(dados.choice[0].text);
+            console.log(erro);
         }); 
     });
 }

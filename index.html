@@ -8,32 +8,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/styles/style.css">
     <script src="./scripts/main.js" defer></script>
+    <script src="./scripts/chatgpt.js" defer></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" defer></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" defer></script>
-    <link rel="shortcut icon" href="./assets/images/iconealca.ico" type="image/x-icon">
-    <title>Pesquisa Alca</title>
+    <title>EducSearch</title>
 </head>
 
 <body>
     <nav id="nav-start">
         <span id="dark-mode"><ion-icon name="moon"></ion-icon></span>
-        <a href="#"><ion-icon name="mail-outline"></ion-icon> AlcaMail</a>
+        <a href="#"><ion-icon name="mail-outline"></ion-icon> Email</a>
         <button id="fazer-login">Fazer login</button>
     </nav>
 
     <main class="search">
-        <img src="./assets/images/logo_AlcaFoods.png" alt="Logo do Google" title="Logo da AlcaFoods">
+        <img src="" alt="Inserir Logo" title="Logo da EducSim" id="logo">
 
         <div class="box-search">
             <span><ion-icon name="search-outline" id="icon-search"></ion-icon></span>
-            <input type="search" title="Insira aqui uma pesquisa">
+            <input type="search" title="Insira aqui uma pesquisa" id="pergunta">
         </div>
 
         <input type="submit" class="pesquisa" value="Pesquisar">
+
+        <div id="divResposta">
+            <p id="resposta"></p>
+        </div>
     </main>
 
     <footer>
-        <p><span id="year"></span> TI - AlcaFoods Ltda.</p>
+        <p><span id="year"></span> EducSim</p>
         <p>Todos os Direitos Reservados.</p>
     </footer>
 </body>

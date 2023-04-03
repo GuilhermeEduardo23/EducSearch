@@ -7,7 +7,7 @@ window.addEventListener(`load`, () => {
 
         spanYear.innerText = currentYear;
 
-        imgLogo.setAttribute(`src`, `./assets/images/google.png`);
+        imgLogo.setAttribute(`src`, ``);
 });
 
 const spanDarkMode = document.getElementById(`dark-mode`);
@@ -17,11 +17,11 @@ spanDarkMode.addEventListener(`click`, () => {
 
     if(document.body.classList.value === `dark-theme`) {
         spanDarkMode.innerHTML = `<ion-icon name="sunny"></ion-icon>`;
-        imgLogo.setAttribute(`src`, `./assets/images/google_dark_mode.png`);
+        imgLogo.setAttribute(`src`, ``);
     }
     else {
         spanDarkMode.innerHTML = `<ion-icon name="moon"></ion-icon>`;
-        imgLogo.setAttribute(`src`, `./assets/images/google.png`);
+        imgLogo.setAttribute(`src`, ``);
     }
         
 });
